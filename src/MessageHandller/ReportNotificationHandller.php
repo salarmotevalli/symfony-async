@@ -1,15 +1,19 @@
 <?php
 
-namespace App\MessageHandler;
+namespace App\MessageHandller;
 
 use App\Message\ReportNotification;
 use Symfony\Component\Messenger\Attribute\AsMessageHandler;
 
 #[AsMessageHandler]
-final class ReportNotificationHandler
+final class ReportNotificationHandller
 {
     public function __invoke(ReportNotification $message)
     {
-        // ... do some work - like sending an SMS message!
+        // get database record
+
+
+        // convert to pdf
+        // email it to user
     }
 }

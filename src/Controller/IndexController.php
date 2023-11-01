@@ -2,8 +2,10 @@
 
 namespace App\Controller;
 
+use App\Messages\ReportNotification;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\Messenger\MessageBus;
 use Symfony\Component\Routing\Annotation\Route;
 
 class IndexController extends AbstractController
@@ -31,12 +33,15 @@ class IndexController extends AbstractController
      * @return JsonResponse
      */
     #[Route('report', name: 'recieve_report', methods: ['POST'])]
-    public function reports(): JsonResponse
+    public function reports(MessageBus $bus): JsonResponse
     {
+
+        // dispatch report notif
+        $bus->dispatch(new ReportNotification());
 
         return $this->json(
             [
-            'message' => 'hello'
+            'message' => 'email sended'
             ]
         );
 
