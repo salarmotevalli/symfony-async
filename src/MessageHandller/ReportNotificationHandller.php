@@ -5,11 +5,17 @@ namespace App\MessageHandller;
 use App\Message\ReportNotification;
 use Faker\Factory;
 use Mpdf\Mpdf;
+use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Messenger\Attribute\AsMessageHandler;
+use Symfony\Component\Mime\Email;
 
 #[AsMessageHandler]
 final class ReportNotificationHandller
 {
+    public function __construct(
+        private MailerInterface $mailer
+    ) {
+    }
     public function __invoke(ReportNotification $message): void
     {
         // get database record
@@ -24,10 +30,18 @@ final class ReportNotificationHandller
         }
 
         // convert to pdf
-        $pdfMaker = new Mpdf();
-        $pdfMaker->Bookmark('Daily report');
-        $pdfMaker->WriteHTML('<h1>Report</h1> <p>you can download the pdf file that attached</p>');
+        $pdf = new Mpdf();
+        $pdf->Bookmark('Daily report');
+        $pdf->WriteHTML('<p>' . json_encode($data) . '</p>');
 
         // email it to user
+        $email = (new Email())
+            ->from('hello@example.com')
+            ->to('salar.mo.ro@gmail.com')
+            ->subject('Report')
+            ->html('<h1>Report pdf</h1> <p>Download the attached file</p>')
+            ->attach($pdf);
+
+        $this->mailer->send($email);
     }
 }
