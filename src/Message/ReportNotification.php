@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Messages;
+namespace App\Message;
 
 final class ReportNotification
 {
@@ -18,7 +18,6 @@ final class ReportNotification
     ) {
     }
 
-    
     public function getEmail(): string
     {
         return $this->email;
