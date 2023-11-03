@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  mysql:
+    image: mysql:latest
+    ports:
+    - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: 'salar' 
+      MYSQL_DATABASE: 'salar'
+      MYSQL_USER: 'salar'
+      MYSQL_PASSWORD: 'salar'
+    volumes:
+      - ./mysql:/var/lib/mysql
+
+  redis: 
+    image: redis:latest
+    ports:
+      - "6379:6379"
+

@@ -97,4 +97,6 @@ tags
 [._]*.un~
 
 # End of https://www.toptal.com/developers/gitignore/api/vim
+mysql
 
+.php-cs-fixer.cache

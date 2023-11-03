@@ -21,8 +21,8 @@ class IndexController extends AbstractController
     {
         return $this->json(
             [
-            'message' => 'Welcome to your new controller!',
-            'path' => 'src/Controller/IndexController.php',
+                'message' => 'Welcome to your new controller!',
+                'path' => 'src/Controller/IndexController.php',
             ]
         );
     }
@@ -43,7 +43,7 @@ class IndexController extends AbstractController
 
         return $this->json(
             [
-            'message' => 'report sent to ' . $body->name .' email: '. $body->email,
+                'message' => 'report sent to ' . $body->name .' email: '. $body->email,
             ]
         );
 

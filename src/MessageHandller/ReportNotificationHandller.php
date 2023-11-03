@@ -30,9 +30,11 @@ final class ReportNotificationHandller
         }
 
         // convert to pdf
-        $pdf = new Mpdf();
-        $pdf->Bookmark('Daily report');
-        $pdf->WriteHTML('<p>' . json_encode($data) . '</p>');
+        $pdfMaker = new Mpdf();
+        $pdfMaker->Bookmark('Daily report');
+        $pdfMaker->WriteHTML('<p>' . json_encode($data) . '</p>');
+        $pdf = $pdfMaker->Output('', 'S');
+
 
         // email it to user
         $email = (new Email())
@@ -40,7 +42,7 @@ final class ReportNotificationHandller
             ->to('salar.mo.ro@gmail.com')
             ->subject('Report')
             ->html('<h1>Report pdf</h1> <p>Download the attached file</p>')
-            ->attach($pdf);
+            ->attach($pdf, 'report.pdf');
 
         $this->mailer->send($email);
     }
