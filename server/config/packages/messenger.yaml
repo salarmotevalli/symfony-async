@@ -11,7 +11,7 @@ framework:
 
         routing:
             # Route your messages to the transports
-            'App\Message\ReportNotification': async
+            App\Message\OrderReport: async
 
 # when@test:
 #    framework:
