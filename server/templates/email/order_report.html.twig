@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+</head>
+    <body>
+        <div class="body">
+            <table>
+                <thead>
+                    <tr>
+                        <th>code</th>
+                        <th>price</th>
+                        <th>buyer</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for order in orders %}
+                        <tr>
+                            <td>{{ order.code }}</td>
+                            <td>{{ order.price }}</td>
+                            <td>{{ order.buyer }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

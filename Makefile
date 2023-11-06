@@ -18,3 +18,5 @@ consume:
 _cd_server:
 	cd ./server
 
+list:
+	grep '^[^#[:space:]].*:' Makefile
