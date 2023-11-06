@@ -1,6 +1,20 @@
 version: '3'
 
+networks:
+  - ngx-srv-msql-mlcchr:
+
 services:
+  nginx:
+    image: nginx:stable-alpine
+    container_name: nginx-container
+    ports:
+      - "8080:80"
+    volumes:
+      - ./server:/var/www/project
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+    networks:
+        - ngx-srv-msql-mlcchr
+
   mysql:
     image: mysql:latest
     ports:
