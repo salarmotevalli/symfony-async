@@ -42,13 +42,13 @@ final class OrderReportHandler
         return $pdfMaker->Output('', 'S');
     }
 
-    private function getMail($pdf)
+    private function makeMail(string $name, string $email, $pdf)
     {
         return (new Email())
             ->from('hello@example.com')
-            ->to('salar.mo.ro@gmail.com')
+            ->to($email)
             ->subject('Report')
-            ->html('<h1>Report pdf</h1> <p>Download the attached file</p>')
+            ->html('<h1>Report pdf</h1> <h3>Hello' . $name . '</h3> <p>this email contains the orders report pdf file</p>')
             ->attach($pdf, 'report.pdf');
     }
 
@@ -63,8 +63,7 @@ final class OrderReportHandler
         // create pdf
         $pdf = $this->createPdf($template);
 
-        // email it to user
-        $email = $this->getMail($pdf);
+        $email = $this->makeMail($message->getName(), $message->getEmail(), $pdf);
 
         $this->mailer->send($email);
     }
