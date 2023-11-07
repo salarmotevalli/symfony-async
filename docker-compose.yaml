@@ -17,23 +17,25 @@ services:
         - ngx-srv-msql-mlcchr
     depends_on:
       - server
-      - mysql
 
-  server:
+  server: &server_tem
     image: ${SERVER_IMAGE_NAME}:latest
     container_name: server-container
       #command: php bin/console messenger:consume async -vv
     volumes:
       - ./server:/var/www/project
+    depends_on:
+      - mysql
+      - redis
+      - mailer
     networks:
         - ngx-srv-msql-mlcchr
 
   worker: 
-    image: ${SERVER_IMAGE_NAME}:latest
+    <<: *server_tem
     container_name: worker-container
-    command: php bin/console messenger:consume async -vv
-    networks:
-        - ngx-srv-msql-mlcchr
+    expose: [] 
+    command: ["/usr/bin/supervisord"]
 
   mysql:
     image: mysql:latest

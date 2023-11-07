@@ -1,0 +1,71 @@
+2023-11-07 13:55:37,216 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2023-11-07 13:55:37,217 INFO supervisord started with pid 1
+2023-11-07 13:55:38,219 INFO spawnerr: can't find command '/usr/sbin/cron'
+2023-11-07 13:55:38,221 INFO spawned: 'messenger-consume_00' with pid 7
+2023-11-07 13:55:38,465 WARN exited: messenger-consume_00 (exit status 1; not expected)
+2023-11-07 13:55:39,467 INFO spawnerr: can't find command '/usr/sbin/cron'
+2023-11-07 13:55:39,469 INFO spawned: 'messenger-consume_00' with pid 10
+2023-11-07 13:55:39,515 WARN exited: messenger-consume_00 (exit status 1; not expected)
+2023-11-07 13:55:41,518 INFO spawnerr: can't find command '/usr/sbin/cron'
+2023-11-07 13:55:41,520 INFO spawned: 'messenger-consume_00' with pid 13
+2023-11-07 13:55:41,565 WARN exited: messenger-consume_00 (exit status 1; not expected)
+2023-11-07 13:55:44,569 INFO spawnerr: can't find command '/usr/sbin/cron'
+2023-11-07 13:55:44,569 INFO gave up: cron entered FATAL state, too many start retries too quickly
+2023-11-07 13:55:44,571 INFO spawned: 'messenger-consume_00' with pid 16
+2023-11-07 13:55:44,616 WARN exited: messenger-consume_00 (exit status 1; not expected)
+2023-11-07 13:55:48,624 INFO spawned: 'messenger-consume_00' with pid 19
+2023-11-07 13:55:48,669 WARN exited: messenger-consume_00 (exit status 1; not expected)
+2023-11-07 13:55:53,676 INFO spawned: 'messenger-consume_00' with pid 22
+2023-11-07 13:55:53,737 WARN exited: messenger-consume_00 (exit status 1; not expected)
+2023-11-07 13:55:59,746 INFO spawned: 'messenger-consume_00' with pid 25
+2023-11-07 13:55:59,791 WARN exited: messenger-consume_00 (exit status 1; not expected)
+2023-11-07 13:56:06,800 INFO spawned: 'messenger-consume_00' with pid 28
+2023-11-07 13:56:06,846 WARN exited: messenger-consume_00 (exit status 1; not expected)
+2023-11-07 13:56:14,859 INFO spawned: 'messenger-consume_00' with pid 31
+2023-11-07 13:56:14,904 WARN exited: messenger-consume_00 (exit status 1; not expected)
+2023-11-07 13:56:23,917 INFO spawned: 'messenger-consume_00' with pid 34
+2023-11-07 13:56:23,975 WARN exited: messenger-consume_00 (exit status 1; not expected)
+2023-11-07 13:56:33,989 INFO spawned: 'messenger-consume_00' with pid 37
+2023-11-07 13:56:34,034 WARN exited: messenger-consume_00 (exit status 1; not expected)
+2023-11-07 13:56:45,048 INFO spawned: 'messenger-consume_00' with pid 40
+2023-11-07 13:56:45,099 WARN exited: messenger-consume_00 (exit status 1; not expected)
+2023-11-07 13:56:57,116 INFO spawned: 'messenger-consume_00' with pid 43
+2023-11-07 13:56:57,161 WARN exited: messenger-consume_00 (exit status 1; not expected)
+2023-11-07 13:57:09,177 WARN received SIGQUIT indicating exit request
+2023-11-07 13:57:17,674 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2023-11-07 13:57:17,675 INFO supervisord started with pid 1
+2023-11-07 13:57:18,676 INFO spawnerr: can't find command '/usr/sbin/cron'
+2023-11-07 13:57:18,677 INFO spawned: 'messenger-consume_00' with pid 8
+2023-11-07 13:57:18,723 WARN exited: messenger-consume_00 (exit status 1; not expected)
+2023-11-07 13:57:19,724 INFO spawnerr: can't find command '/usr/sbin/cron'
+2023-11-07 13:57:19,725 INFO spawned: 'messenger-consume_00' with pid 11
+2023-11-07 13:57:19,769 WARN exited: messenger-consume_00 (exit status 1; not expected)
+2023-11-07 13:57:21,772 INFO spawnerr: can't find command '/usr/sbin/cron'
+2023-11-07 13:57:21,774 INFO spawned: 'messenger-consume_00' with pid 14
+2023-11-07 13:57:21,821 WARN exited: messenger-consume_00 (exit status 1; not expected)
+2023-11-07 13:57:24,825 INFO spawnerr: can't find command '/usr/sbin/cron'
+2023-11-07 13:57:24,825 INFO gave up: cron entered FATAL state, too many start retries too quickly
+2023-11-07 13:57:24,828 INFO spawned: 'messenger-consume_00' with pid 17
+2023-11-07 13:57:24,877 WARN exited: messenger-consume_00 (exit status 1; not expected)
+2023-11-07 13:57:28,883 INFO spawned: 'messenger-consume_00' with pid 20
+2023-11-07 13:57:28,930 WARN exited: messenger-consume_00 (exit status 1; not expected)
+2023-11-07 13:57:30,932 WARN received SIGQUIT indicating exit request
+2023-11-07 13:58:06,161 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2023-11-07 13:58:06,162 INFO supervisord started with pid 1
+2023-11-07 13:58:07,164 INFO spawnerr: can't find command '/usr/sbin/cron'
+2023-11-07 13:58:07,166 INFO spawned: 'messenger-consume_00' with pid 7
+2023-11-07 13:58:08,215 INFO spawnerr: can't find command '/usr/sbin/cron'
+2023-11-07 13:58:08,215 INFO success: messenger-consume_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2023-11-07 13:58:10,218 INFO spawnerr: can't find command '/usr/sbin/cron'
+2023-11-07 13:58:13,222 INFO spawnerr: can't find command '/usr/sbin/cron'
+2023-11-07 13:58:13,222 INFO gave up: cron entered FATAL state, too many start retries too quickly
+2023-11-07 13:58:17,227 WARN received SIGQUIT indicating exit request
+2023-11-07 13:58:17,227 INFO waiting for messenger-consume_00 to die
+2023-11-07 13:58:17,230 WARN stopped: messenger-consume_00 (terminated by SIGTERM)
+2023-11-07 13:58:28,170 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2023-11-07 13:58:28,171 INFO supervisord started with pid 1
+2023-11-07 13:58:29,174 INFO spawned: 'messenger-consume_00' with pid 7
+2023-11-07 13:58:30,222 INFO success: messenger-consume_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2023-11-07 13:58:54,249 WARN received SIGQUIT indicating exit request
+2023-11-07 13:58:54,250 INFO waiting for messenger-consume_00 to die
+2023-11-07 13:58:54,256 WARN stopped: messenger-consume_00 (terminated by SIGTERM)
