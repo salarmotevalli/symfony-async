@@ -76,3 +76,7 @@
 2023-11-07 14:05:43,985 WARN received SIGQUIT indicating exit request
 2023-11-07 14:05:43,986 INFO waiting for messenger-consume_00 to die
 2023-11-07 14:05:43,989 WARN stopped: messenger-consume_00 (terminated by SIGTERM)
+2023-11-07 14:11:58,109 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2023-11-07 14:11:58,110 INFO supervisord started with pid 1
+2023-11-07 14:11:59,114 INFO spawned: 'messenger-consume_00' with pid 7
+2023-11-07 14:12:00,174 INFO success: messenger-consume_00 entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)

@@ -33,7 +33,7 @@ class IndexController extends AbstractController
      *
      * @return JsonResponse
      */
-    #[Route('report/orders', name: 'order_report', methods: ['POST', 'GET'])]
+    #[Route('report/orders', name: 'order_report', methods: ['POST'])]
     public function reports(Request $request, MessageBusInterface $bus): JsonResponse
     {
         $body = (object) json_decode($request->getContent());

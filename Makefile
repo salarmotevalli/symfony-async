@@ -9,5 +9,8 @@ run:
 down:
 	docker-compose down
 
+i:
+	docker-compose exec server sh -c "php bin/console doctrine:fixtures:load"
+
 list:
 	grep '^[^#[:space:]].*:' Makefile
