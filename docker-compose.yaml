@@ -1,7 +1,7 @@
 version: '3'
 
 networks:
-  - ngx-srv-msql-mlcchr:
+  ngx-srv-msql-mlcchr:
 
 services:
   nginx:
@@ -14,11 +14,23 @@ services:
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
     networks:
         - ngx-srv-msql-mlcchr
+    depends_on:
+      - server
+      - mysql
+
+  server:
+    build: 
+        context: .
+        dockerfile: ./server/Dockerfile
+    container_name: server-container
+    volumes:
+      - ./server:/var/www/project
+    networks:
+        - ngx-srv-msql-mlcchr
 
   mysql:
     image: mysql:latest
-    ports:
-    - "3306:3306"
+    container_name: mysql_container
     environment:
       MYSQL_ROOT_PASSWORD: 'salar' 
       MYSQL_DATABASE: 'salar'
@@ -26,9 +38,20 @@ services:
       MYSQL_PASSWORD: 'salar'
     volumes:
       - ./mysql:/var/lib/mysql
+    networks:
+        - ngx-srv-msql-mlcchr
 
   redis: 
     image: redis:latest
-    ports:
-      - "6379:6379"
-
+    networks:
+        - ngx-srv-msql-mlcchr
+  
+  
+  mailer:
+    image: schickling/mailcatcher
+    container_name: mailcatcher-container
+    ports: 
+      - "1025:1025"
+      - "1080:1080"
+    networks:
+        - ngx-srv-msql-mlcchr

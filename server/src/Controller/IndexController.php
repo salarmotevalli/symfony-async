@@ -39,7 +39,7 @@ class IndexController extends AbstractController
         $body = (object) json_decode($request->getContent());
 
         // dispatch report notif
-        $bus->dispatch(new OrderReport($body->email, $body->name));
+        $bus->dispatch(new OrderReport($body->name, $body->email));
 
         return $this->json(
             [
