@@ -1,7 +1,7 @@
 FROM php:8.2-fpm
 
 RUN apt-get update && apt-get install -y zlib1g-dev g++ git libicu-dev zip libzip-dev zip \
-    super
+    supervisor\
 	&& docker-php-ext-install intl opcache pdo pdo_mysql \
     && docker-php-ext-configure zip \
     && docker-php-ext-install zip
