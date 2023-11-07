@@ -19,4 +19,5 @@ curl -H "Content-type: application/json" 'http://0.0.0.0:8080/report/orders' -X 
 ```json
 {"message":"report sent to salar email: salar.mo.ro@gmail.com"}
 ```
-Then open and check http://0.0.0.0:1080/ the mailcatcher endpoint
+Then open and check http://0.0.0.0:1080/ the Mailcatcher endpoin
+
