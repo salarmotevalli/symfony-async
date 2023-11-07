@@ -3,6 +3,7 @@ version: '3'
 networks:
   ngx-srv-msql-mlcchr:
 
+
 services:
   nginx:
     image: nginx:stable-alpine
@@ -19,12 +20,18 @@ services:
       - mysql
 
   server:
-    build: 
-        context: .
-        dockerfile: ./server/Dockerfile
+    image: ${SERVER_IMAGE_NAME}:latest
     container_name: server-container
+      #command: php bin/console messenger:consume async -vv
     volumes:
       - ./server:/var/www/project
+    networks:
+        - ngx-srv-msql-mlcchr
+
+  worker: 
+    image: ${SERVER_IMAGE_NAME}:latest
+    container_name: worker-container
+    command: php bin/console messenger:consume async -vv
     networks:
         - ngx-srv-msql-mlcchr
 
